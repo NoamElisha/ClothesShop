@@ -76,7 +76,8 @@ function MainNavbar() {
     `;
   }; // this screen is represent the user interface of the website
   // the H1 get a counter inside him from the "state"
- window.MainNavbar = MainNavbar; 
+  export default MainNavbar;
+ //window.MainNavbar = MainNavbar; 
  
 
 
