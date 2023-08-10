@@ -1,5 +1,7 @@
 
-function Products() {
+import Product from "../Product/Product";
+function Products(garments) {
+  console.log(garments);
     return `
     <section>
     <div class="text-center">

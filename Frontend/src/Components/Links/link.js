@@ -1,5 +1,5 @@
 
-async function Links() {
+function Links() {
     
     const app = `
 

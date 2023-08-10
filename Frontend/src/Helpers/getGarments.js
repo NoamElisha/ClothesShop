@@ -6,4 +6,6 @@ async function getGarments(){
     return data;
 }
 // when i see pending use awiat
-console.log(await getGarments());
+
+
+export default getGarments;
