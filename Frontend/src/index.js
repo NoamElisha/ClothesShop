@@ -8,6 +8,7 @@ import Products from './Components/Products/Products';
 import ProductPages from './Components/ProductPages/ProductPages.component';
 import Copyright from './Components/Copyright/Copyright.component';
 import getGarments from './Helpers/getGarments';
+import MainPage from './Pages/MainPage/MainPage.page';
 
 const App = async function _App() {
   
@@ -15,15 +16,8 @@ const App = async function _App() {
   const element = document.createElement('div');
     const app = `
      
-      ${MainNavbar()}
-      ${Carousel()}
-    <div class="contanier">
-      ${SearchNavbar()}
-      ${Products(_App.state.garments)}
-      ${ProductPages()}
-    </div>
-      ${Copyright()}
-      ${Scripts()}
+     ${MainPage(_App.state.garments)}
+     ${Scripts()}
     `;
 
   element.innerHTML = app;
