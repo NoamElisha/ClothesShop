@@ -1,14 +1,16 @@
 
 
-function Product() {
-  console.log();
+function Product(Garment) {
+  //console.log(Garment);
+  console.log(Garment.picture);
+
     return `
 
 <div class="col-lg-3 col-md-6 mb-4">
     <div class="card">
     <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
       data-mdb-ripple-color="light">
-      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+      <img src="${Garment.picture}"
         class="w-100" />
       <a href="#!">
         <div class="mask">
@@ -23,12 +25,12 @@ function Product() {
     </div>
     <div class="card-body">
       <a href="" class="text-reset">
-        <h5 class="card-title mb-2">Denim shirt</h5>
+        <h5 class="card-title mb-2">${Garment.name}</h5>
       </a>
       <a href="" class="text-reset ">
         <p>Shirt</p>
       </a>
-      <h6 class="mb-3 price">120$</h6>
+      <h6 class="mb-3 price">${Garment.price}$</h6>
     </div>
   </div>
 </div>
