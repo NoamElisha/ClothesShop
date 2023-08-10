@@ -1,3 +1,4 @@
+
 function Carousel() {
     return `
     <!-- carousel -->
@@ -92,7 +93,9 @@ function Carousel() {
       </button>
     </div>
     `;
-  };
+  }; // this screen is represent the user interface of the website
+  // the H1 get a counter inside him from the "state"
 
- export default Carousel;
+  
+  window.Carousel = Carousel; 
  

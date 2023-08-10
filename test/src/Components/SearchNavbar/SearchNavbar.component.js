@@ -1,5 +1,4 @@
 
-
 function SearchNavbar() {
     return `
     <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B">
@@ -55,4 +54,4 @@ function SearchNavbar() {
   // the H1 get a counter inside him from the "state"
 
   
- export default SearchNavbar;
+  window.SearchNavbar = SearchNavbar; 

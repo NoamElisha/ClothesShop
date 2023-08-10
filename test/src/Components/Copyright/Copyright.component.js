@@ -11,7 +11,7 @@ function Copyright() {
   // the H1 get a counter inside him from the "state"
 
   // <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> 
- export default Copyright;
+ window.Copyright = Copyright; 
  
 
 

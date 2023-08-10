@@ -10,4 +10,4 @@ function Scripts() {
     return app;
   }
 
-  export default Scripts
+  export default Scripts;

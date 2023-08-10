@@ -1,25 +1,32 @@
 import './style.css';
-import MainNavbar from './Components/MainNavbar/Navbar.component';
-import Scripts from './Components/Links/scripts';
-import Links from './Components/Links/link';
-
-
+import MainNavbar from './Components/MainNavbar/Navbar.component.js';
+import Scripts from './Components/Links/scripts.js';
+import Links from './Components/Links/link.js';
+import Carousel from './Components/Carousel/Carousel.component.js';
+import SearchNavbar from './Components/SearchNavbar/SearchNavbar.component';
+import Products from './Components/Products/Products';
+import ProductPages from './Components/ProductPages/ProductPages.component';
+import Copyright from './Components/Copyright/Copyright.component';
 
 function App() {
   const element = document.createElement('div');
-    const app = ` <h1>Hello Vanilla JS!</h1>
-      <div>
-        Example of state management in Vanilla JS
-      </div>
-      <br />
+    const app = `
+     
       ${MainNavbar()}
-      <button id="increase">Increase</button>
-      <button id="decrease">decrease</button>
+      ${Carousel()}
+    <div class="contanier">
+      ${SearchNavbar()}
+      ${Products()}
+      ${ProductPages()}
+    </div>
+      ${Copyright()}
+      ${Scripts()}
     `;
   element.innerHTML = app;
   return element;
 }
 
-document.head.insertAdjacentHTML("beforeend", Links());
+document.head.insertAdjacentHTML("beforeend",await Links());
 document.body.appendChild(App());
-document.body.insertAdjacentHTML("beforeend", Scripts());
+
+//document.body.insertAdjacentHTML("beforeend", Scripts());
