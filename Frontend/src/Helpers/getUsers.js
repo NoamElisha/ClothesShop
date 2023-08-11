@@ -7,4 +7,6 @@ async function getUsers(){
     return data;
 }
 // when i see pending use awiat
-console.log(await getUsers());
+//console.log(await getUsers());
+
+export default getUsers;

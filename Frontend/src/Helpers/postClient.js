@@ -14,13 +14,16 @@ async function postClient(username,password, garments=[]){
         throw error;
     }
 }
-// when i see pending use awiat
+
 const username = "noam";
 const password = "123";
-postClient(username, password)
+postClient(username, password) // call back hell
     .then(data => {
         console.log(data);
     })
     .catch(error => {
         console.error("Error:", error);
 });
+
+
+export default postClient;
