@@ -11,18 +11,14 @@ async function deleteGarment(clientId, garmentId) {
 }
 
 // Usage
-const clientId = "64d0df235d6c306004cd475c"; 
-const garmentId = "64cfe559c9dd6d1968ac8fc9"; 
-deleteGarment(clientId, garmentId)
-    .then(data => {
-        //console.log(data);
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
-
-
-
-
-
-
+//const clientId = "64d0df235d6c306004cd475c"; 
+//const garmentId = "64cfe559c9dd6d1968ac8fc9"; 
+//deleteGarment(clientId, garmentId)
+//    .then(data => {
+//        //console.log(data);
+//    })
+//    .catch(error => {
+//        console.error("Error:", error);
+//    });
+//
+export default deleteGarment;

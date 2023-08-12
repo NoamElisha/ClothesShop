@@ -6,10 +6,8 @@ import ProductPages from "../../Components/ProductPages/ProductPages.component";
 import Copyright from "../../Components/Copyright/Copyright.component";
 
 
- function MainPage(garments) {
-  
+ function MainPage(garments, user, setUser) {
     ////console.log(_App.state.garments);
-   
     const element = document.createElement('div');
 
       const app = `
@@ -18,16 +16,15 @@ import Copyright from "../../Components/Copyright/Copyright.component";
         ${Carousel()}
       <div class="contanier">
         ${SearchNavbar(garments)}
-        ${Products(garments)}
         ${ProductPages()}
       </div>
         ${Copyright()}
       `;
   
       element.innerHTML = app;
-    
+      const search = element.querySelector("#search-navbar");
+      search.after(Products(garments, user, setUser));
     return element;
   }
 
   export default MainPage;
-

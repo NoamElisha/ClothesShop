@@ -24,7 +24,7 @@ const App = async function _App() {
   else if(_App.state.numberPage==1)
   {
     
-    element.appendChild(MainPage(_App.state.garments));
+    element.appendChild(MainPage(_App.state.garments, _App.state.user, _App.state.setUser));
     element.insertAdjacentHTML("beforeend",Scripts());
     //const mainPage = MainPage(_App.state.garments);
     // console.log("Hello");
@@ -53,9 +53,6 @@ App.state = { // this function is used to store the data
   numberPage: 0,
   user:{},
   garments: await getGarments(),
-
-
-
   setUser: (user) => {
     setState(() =>App.state.user = user)
   },
@@ -76,7 +73,7 @@ const setState = (callback) => { //call back is a function
 
 const updateTree = async () => {
   const appContent = document.getElementById('app-content');
- appContent.replaceWith(await App());
+  appContent.replaceWith(await App());
   //document.body.appendChild(await App());
 };
 

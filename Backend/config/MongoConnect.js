@@ -14,10 +14,3 @@ export default function mongoConnect() {
     })
     .on('error', (error) => console.error(error));
 }
-
-
-
-
-
-
-

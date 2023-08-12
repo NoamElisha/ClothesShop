@@ -32,7 +32,7 @@ router.route('/')
             password:req.body.password,
             garments: req.body.garments
         });
-        const val= await data.save();
+        const val = await data.save().populate("garments").exec();
         res.status(200).json(val);
     } catch(error){
         res.status(500).json({ 
@@ -58,12 +58,11 @@ router.route('/usernames')
     }
 })
 .post(async (req, res) => { //get username and passowrd and return me the person
-
   try {
       const { username, password } = req.body;
 
       // Find a client with the given username and password
-      const client = await ClientModel.findOne({ username, password });
+      const client = await ClientModel.findOne({ username, password }).populate("garments").exec();
 
       if (client) {
           res.status(200).json(client);
@@ -106,8 +105,7 @@ router.route('/garments/:clientId') // update garments to the client
 
         // Save the updated client
         const updatedClient = await client.save();
-
-        res.status(200).json(updatedClient);
+        res.status(200).json(await updatedClient.populate("garments"));
     } catch (error) {
         res.status(500).json({
             error: 'an error occurred',
@@ -135,8 +133,9 @@ router.route('/garments/:clientId/:garmentId')// delete garment by the garment i
 
         // Save the updated client
         const updatedClient = await client.save();
+        const populatedClient = await updatedClient.populate("garments");
 
-        res.status(200).json(updatedClient);
+        res.status(200).json(populatedClient);
     } catch (error) {
         res.status(500).json({
             error: 'an error occurred',
