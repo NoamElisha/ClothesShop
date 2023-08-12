@@ -1,8 +1,8 @@
 
 
 function Product(Garment) {
-  //console.log(Garment);
-  //console.log(Garment.picture);
+  ////console.log(Garment);
+  ////console.log(Garment.picture);
 
     return `
 

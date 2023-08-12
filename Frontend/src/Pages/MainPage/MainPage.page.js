@@ -8,8 +8,10 @@ import Copyright from "../../Components/Copyright/Copyright.component";
 
  function MainPage(garments) {
   
-    //console.log(_App.state.garments);
-    
+    ////console.log(_App.state.garments);
+   
+    const element = document.createElement('div');
+
       const app = `
        
         ${MainNavbar()}
@@ -20,11 +22,11 @@ import Copyright from "../../Components/Copyright/Copyright.component";
         ${ProductPages()}
       </div>
         ${Copyright()}
-        
       `;
   
+      element.innerHTML = app;
     
-    return app;
+    return element;
   }
 
   export default MainPage;

@@ -3,8 +3,8 @@ import './login.page.css'
 //import postClient from '../../Helpers/postClient.js'
 import postAvailableClient from '../../Helpers/postAvailableClient.js'
 
- function LoginPage(setUser,user) {
-   // console.log();
+ function LoginPage(setUser,setPage) {
+   // //console.log();
     const element = document.createElement('div');
     
       const app = `
@@ -37,10 +37,11 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
         
         try {
             const client = await postAvailableClient(username,password,[])
-           setUser(client);
-            setTimeout(() => { console.log(client);
-            }, 1000);
-            console.log("User logged successfully!");
+
+            setPage(1);
+            setUser(client);
+  
+           console.log("User logged successfully!");
 
         } catch (error) {
             console.error("Error:", error);
@@ -64,7 +65,7 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
 //   event.preventDefault();
 //   const username = form.getElementByClassName("user")[0];
 //   const password = form.getElementByClassName("pass")[0];
-//   console.log(username,password);
+//   //console.log(username,password);
 //   });
 //   return element.firstChild;
 
@@ -77,7 +78,7 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
 //     const username = form.querySelector(".user").value;
 //     const password = form.querySelector(".pass").value;
     
-//     console.log(form.querySelector(".user"));
-//     console.log('Username:', username);
-//     console.log('Password:', password);
+//     //console.log(form.querySelector(".user"));
+//     //console.log('Username:', username);
+//     //console.log('Password:', password);
 //   });

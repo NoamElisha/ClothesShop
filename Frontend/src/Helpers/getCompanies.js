@@ -6,4 +6,4 @@ async function getCompanies(){
     return data;
 }
 // when i see pending use awiat
-console.log(await getCompanies());
+//console.log(await getCompanies());

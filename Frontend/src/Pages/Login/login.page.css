@@ -5,12 +5,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 
 
 .login-container {
+    /* height: 100vh;  */
+    margin-top: 15rem;
     background-color: #fff;
     padding-left: 20px;
     padding-right: 40px;
