@@ -19,7 +19,7 @@ const username = "noam";
 const password = "123";
 postClient(username, password)
     .then(data => {
-        console.log(data);
+        //console.log(data);
     })
     .catch(error => {
         console.error("Error:", error);
