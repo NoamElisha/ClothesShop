@@ -6,12 +6,16 @@ import companies from "./Routes/companies.route.js";
 import clients from "./Routes/clients.route.js";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import cors from "cors";
+
+
 
 const env_path = "./config/.env";
 dotenv.config({path: env_path});
 
 const app = express()
 
+app.use(cors());
 
 // conntect to db
 mongoConnect(); // start my data base
@@ -51,6 +55,6 @@ app.use("/clients", clients);
  
 
 app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`)
+  //console.log(`Example app listening on port ${process.env.PORT}`)
 })
 
