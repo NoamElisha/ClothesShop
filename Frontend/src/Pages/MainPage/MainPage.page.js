@@ -12,7 +12,7 @@ import Copyright from "../../Components/Copyright/Copyright.component";
 
       const app = `
        
-        ${MainNavbar()}
+        ${MainNavbar(setUser)}
         ${Carousel()}
       <div class="contanier">
         ${SearchNavbar(garments)}
@@ -22,8 +22,8 @@ import Copyright from "../../Components/Copyright/Copyright.component";
       `;
   
       element.innerHTML = app;
-      const search = element.querySelector("#search-navbar");
-      search.after(Products(garments, user, setUser));
+       const search = element.querySelector("#search-navbar");
+       search.after(Products(garments, user, setUser));
     return element;
   }
 

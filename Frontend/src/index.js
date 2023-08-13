@@ -5,6 +5,10 @@ import MainPage from './Pages/MainPage/MainPage.page.js';
 import LoginPage from './Pages/Login/Login.page.js';
 import getUsers from './Helpers/getUsers.js'
 import Scripts from './Components/Links/scripts'
+import RegisterPage from './Pages/Register/Register.page';
+import CheckOutPage from './Pages/CheckOut/CheckOut.page';
+
+
 const App = async function _App() {
 
   ////console.log(_App.state.garments);
@@ -26,20 +30,21 @@ const App = async function _App() {
     
     element.appendChild(MainPage(_App.state.garments, _App.state.user, _App.state.setUser));
     element.insertAdjacentHTML("beforeend",Scripts());
-    //const mainPage = MainPage(_App.state.garments);
-    // console.log("Hello");
-    // const app =`
 
-    // ${MainPage(_App.state.garments)}
-    // ${Scripts()}
-    // `;
-    //const scripts = Scripts();
-    //mainPageContainer.innerHTML= mainPage;
     
     return element;
 
-    //element.innerHTML= mainPageContainer;
   }
+  else if(_App.state.numberPage==2)
+  {
+    element.appendChild(RegisterPage(_App.state.setPage));
+
+  }
+  // else if(_App.state.numberPage==3)
+  // {
+  //   element.appendChild(CheckOutPage(_App.state.garments, _App.state.user, _App.state.setUser));
+
+  // }
 
   // element.innerHTML = app;
    return element;
@@ -53,6 +58,7 @@ App.state = { // this function is used to store the data
   numberPage: 0,
   user:{},
   garments: await getGarments(),
+  
   setUser: (user) => {
     setState(() =>App.state.user = user)
   },

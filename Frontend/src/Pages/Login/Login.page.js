@@ -19,7 +19,7 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
           <input type="password" class="pass" id="password" name="password" required>
           <button type="submit">Login</button>
       </form>
-      <p>Don't have an account? <a href="register.html">Register here</a></p>
+      <p>Don't have an account? <a href="#" id="register-link"}" >Register here</a></p>
 
     </div>
     
@@ -44,13 +44,26 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
            console.log("User logged successfully!");
 
         } catch (error) {
-            console.error("Error:", error);
+          alert("wrong username or password");
+            //console.error("Error:", error);
         }
     });
+
+    const registerLink = element.querySelector("#register-link");
+    if(registerLink)
+    {
+      registerLink.addEventListener("click",() => goToRegister());
+      function goToRegister() {
+          setPage(2);
+      }
+    }
+
+
       return element; 
     
   }
 
+ 
   export default LoginPage;
 
 

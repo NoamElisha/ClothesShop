@@ -15,15 +15,15 @@ async function postClient(username,password, garments=[]){
     }
 }
 
-const username = "noam";
-const password = "123";
-postClient(username, password) // call back hell
-    .then(data => {
-        //console.log(data);
-    })
-    .catch(error => {
-        console.error("Error:", error);
-});
+// const username = "noam";
+// const password = "123";
+// postClient(username, password) // call back hell
+//     .then(data => {
+//         //console.log(data);
+//     })
+//     .catch(error => {
+//         console.error("Error:", error);
+// });
 
 
 export default postClient;
