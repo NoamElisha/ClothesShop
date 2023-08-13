@@ -10,7 +10,7 @@ import postAvailableClient from '../../Helpers/postAvailableClient.js'
       const app = `
        
     <div class="login-container">
-      <h1><strong>Welcom to ClothesShop</strong> </h1>
+      <h1><strong>Welcome to ClothesShop</strong> </h1>
       <h2>Login</h2>
       <form id="login-form" class="login-form-class">
           <label for="username">Username:</label>

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const schema = new mongoose.Schema({ 
     name: {
         type: String,
-        required: true // must give a name in order to save in the data base
+        required: true 
       },
       price: {
         type: Number,

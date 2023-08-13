@@ -44,7 +44,6 @@ function MainNavbar() {
     <!-- Icon -->
     <a class="nav-link me-3" id="cart" href="#">
       <i class="fas fa-shopping-cart"></i>
-      <span class="badge rounded-pill badge-notification bg-danger">1</span>
     </a>
   </div>
   <!-- Right elements -->

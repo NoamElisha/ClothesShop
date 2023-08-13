@@ -13,7 +13,7 @@ import postClient from '../../Helpers/postClient';
       const app = `
        
       <div class="register-container">
-      <h1><strong>Welcom to ClothesShop</strong> </h1>
+      <h1><strong>Welcome to ClothesShop</strong> </h1>
       <h2>Register</h2>
       <form id="register-form-class">
           <label for="username">Username:</label>
@@ -82,48 +82,5 @@ import postClient from '../../Helpers/postClient';
 
 
 
-//   element.innerHTML = app;
-//   const form = element.getElementsByClassName("login-form-class")[0];
-//   form.addEventListener('submit',(event) => {
-//   event.preventDefault();
-//   const username = form.getElementByClassName("user")[0];
-//   const password = form.getElementByClassName("pass")[0];
-//   //console.log(username,password);
-//   });
-//   return element.firstChild;
 
 
-
-// form.addEventListener('submit', (event) => {
-      
-//     event.preventDefault();
-    
-//     const username = form.querySelector(".user").value;
-//     const password = form.querySelector(".pass").value;
-    
-//     //console.log(form.querySelector(".user"));
-//     //console.log('Username:', username);
-//     //console.log('Password:', password);
-//   });
-
-
-const app = `
-<div class="register-container">
-<h1><strong>Welcom to ClothesShop</strong> </h1>
-<h2>Register</h2>
-<form id="register-form">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <button type="submit">Register</button>
-</form>
-<p>Already have an account? <a href="login.html">Login here</a></p>
-<p><a href="index.html">Go to Main Page </a></p>
-</div>
-
-
-
-
-
-`;

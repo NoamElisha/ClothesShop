@@ -3,7 +3,7 @@ import Product from "../Product/Product";
 
 
 
-function Products(garments, user, setUser,) {
+function Products(garments, user, setUser) {
     const element = document.createElement("div");
     const app = `
       <section>
@@ -17,9 +17,18 @@ function Products(garments, user, setUser,) {
     element.innerHTML = app;
     const row = element.querySelector("#row");
     
+
+
+    
     garments.map((garment) => {
       row.appendChild(Product(garment, user, setUser));
     });
+
+   
+
+
+
+
 
     return element;
   }; 

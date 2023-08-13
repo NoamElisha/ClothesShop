@@ -1,16 +1,11 @@
-
-
-
-
-
-function SearchNavbar(garments) {
+function SearchNavbar() {
   return `
   <nav id="search-navbar" class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B">
   <!-- Container wrapper -->
   <div class="container-fluid">
  
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Categories:</a>
+    <a class="navbar-brand" href="#">Garments:</a>
  
     <!-- Toggle button -->
     <button 
@@ -26,36 +21,13 @@ function SearchNavbar(garments) {
  
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
- 
-        <!-- Link -->
-        <li class="nav-item acitve">
-          <a class="nav-link text-white" href="#">All</a>
-        </li>
-        <li class="nav-item">
-              <a class="nav-link text-white" href="#">Shirts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Sport wears</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Outwears</a>
-            </li>
- 
-      </ul>
- 
-      <!-- Search -->
-      <form class="w-auto py-1" style="max-width: 12rem">
-        <input type="search" class="form-control rounded-0" placeholder="Search" aria-label="Search">
-      </form>
- 
+      <!-- Use ms-auto class to push search input to the right -->
+      
     </div>
   </div>
   <!-- Container wrapper -->
 </nav>
   `;
-}; // this screen is represent the user interface of the website
-// the H1 get a counter inside him from the "state"
-
+};
 
 export default SearchNavbar;
