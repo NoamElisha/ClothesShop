@@ -6,7 +6,7 @@ import ProductPages from "../../Components/ProductPages/ProductPages.component";
 import Copyright from "../../Components/Copyright/Copyright.component";
 
 
- function MainPage(garments, user, setUser,setPage) {
+ function MainPage(garments, user, setUser,setPage,sumProduct,totalAmount) {
     ////console.log(_App.state.garments);
     const element = document.createElement('div');
 
@@ -23,7 +23,7 @@ import Copyright from "../../Components/Copyright/Copyright.component";
       
       element.innerHTML = app;
       const search = element.querySelector("#search-navbar");
-      search.after(Products(garments, user, setUser));
+      search.after(Products(garments, user, setUser,sumProduct,totalAmount));
 
 
       const cart = element.querySelector("#cart");

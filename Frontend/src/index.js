@@ -58,6 +58,7 @@ App.state = { // this function is used to store the data
   numberPage: 0,
   user:{},
   garments: await getGarments(),
+  totalAmount: 0,
   
   setUser: (user) => {
     setState(() =>App.state.user = user)
@@ -65,8 +66,8 @@ App.state = { // this function is used to store the data
   setPage: (number) => { // the increment fucntion increse the count by 1
     setState(() => App.state.numberPage = number );// update the var inside the state
   },
-  decrement: () => {
-      setState(() => App.state.numberPage = App.state.numberPage);
+  sumProduct: (number) => {
+      setState(() => App.state.totalAmount = number);
     }
 };
 

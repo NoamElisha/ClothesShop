@@ -3,7 +3,7 @@ import Product from "../Product/Product";
 
 
 
-function Products(garments, user, setUser) {
+function Products(garments, user, setUser,) {
     const element = document.createElement("div");
     const app = `
       <section>
@@ -22,8 +22,8 @@ function Products(garments, user, setUser) {
     });
 
     return element;
-  }; // this screen is represent the user interface of the website
-  // the H1 get a counter inside him from the "state"
+  }; 
+  
 
   export default Products;
    

@@ -48,6 +48,7 @@ function Product(Garment, user, setUser) {
       }
       else {
         const data = await putGarment(user._id, Garment._id);
+        
         console.log(data);
         setUser(data);
       }
