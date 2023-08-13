@@ -26,14 +26,21 @@ router.route('/')
 })
 .post(async (req,res) =>{
     try{ // get username paswword and garments and add a new client
-        
-        const data =  new ClientModel({
+        const client= {
             username:req.body.username,
             password:req.body.password,
             garments: req.body.garments
+        }
+        const data =  new ClientModel({
+            username:client.username,
+            password:client.password,
+            garments: client.garments
         });
-        const val = await data.save().populate("garments").exec();
-        res.status(200).json(val);
+       
+        console.log(client);
+        const val = await data.save();
+        const signUp=await val.populate("garments");
+        res.status(200).json(signUp);
     } catch(error){
         res.status(500).json({ 
             error:'an error occurred',
@@ -60,7 +67,7 @@ router.route('/usernames')
 .post(async (req, res) => { //get username and passowrd and return me the person
   try {
       const { username, password } = req.body;
-
+        
       // Find a client with the given username and password
       const client = await ClientModel.findOne({ username, password }).populate("garments").exec();
 
@@ -143,5 +150,29 @@ router.route('/garments/:clientId/:garmentId')// delete garment by the garment i
         });
     }
 });
+router.route('/check-username')
+    .post(async (req, res) => {
+        try {
+            const { username } = req.body;
+
+            // Check if a client with the provided username exists
+            const existingClient = await ClientModel.findOne({ username });
+
+            if (existingClient) {
+                // Username exists
+                res.status(200).json({ result: 0 }); // Return 0
+            } else {
+                // Username doesn't exist
+                res.status(200).json({ result: 1 }); // Return 1
+            }
+        } catch (error) {
+            res.status(500).json({
+                error: 'an error occurred',
+                message: error.message
+            });
+        }
+    });
+
+
 
 export default router;

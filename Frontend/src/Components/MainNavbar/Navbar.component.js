@@ -32,7 +32,7 @@ function MainNavbar() {
     <!-- Left links -->
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item active">
-        <a class="nav-link " href="https://mdbootstrap.com/">Home</a>
+        <a class="nav-link" id="HomePage" href="#">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://mdbootstrap.com/docs/standard/">About</a>
@@ -51,7 +51,7 @@ function MainNavbar() {
   <!-- Right elements -->
   <div class="d-flex align-items-center">
     <!-- Icon -->
-    <a class="nav-link me-3" href="#">
+    <a class="nav-link me-3" id="cart" href="#">
       <i class="fas fa-shopping-cart"></i>
       <span class="badge rounded-pill badge-notification bg-danger">1</span>
     </a>

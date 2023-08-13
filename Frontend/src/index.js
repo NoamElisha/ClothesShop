@@ -28,7 +28,7 @@ const App = async function _App() {
   else if(_App.state.numberPage==1)
   {
     
-    element.appendChild(MainPage(_App.state.garments, _App.state.user, _App.state.setUser));
+    element.appendChild(MainPage(_App.state.garments, _App.state.user, _App.state.setUser,_App.state.setPage));
     element.insertAdjacentHTML("beforeend",Scripts());
 
     
@@ -40,11 +40,11 @@ const App = async function _App() {
     element.appendChild(RegisterPage(_App.state.setPage));
 
   }
-  // else if(_App.state.numberPage==3)
-  // {
-  //   element.appendChild(CheckOutPage(_App.state.garments, _App.state.user, _App.state.setUser));
+   else if(_App.state.numberPage==3)
+   {
+     element.appendChild(CheckOutPage(_App.state.garments, _App.state.user, _App.state.setUser,_App.state.setPage));
 
-  // }
+   }
 
   // element.innerHTML = app;
    return element;
